@@ -1,14 +1,15 @@
 import { DsDatePipe } from './ds-date.pipe';
 import { of } from 'rxjs';
 
-describe('DsDatePipe', () => {
+fdescribe('DsDatePipe', () => {
   const translateServiceInstace = Object.assign({
     get: (key: string) => {
       return of('LOCALIZED_MONTH');
     }
   });
   const cdrInstance = Object.assign({
-    detectChanges: () => { /***/ }
+    detectChanges: () => { /***/ },
+    markForCheck: () => { /***/ }
   });
 
   let pipe: DsDatePipe;
